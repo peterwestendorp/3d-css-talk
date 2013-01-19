@@ -30,21 +30,11 @@
         <section>
           <h1 style="margin-top:0.5em;">Hi</h1>
           <img src="lib/images/card.png" alt="" style="margin-left: -262px; box-shadow:0px 0px 20px 5px rgba(0, 0, 0, 0.15);">
-          <aside class="notes">I'm Peter Westendorp a developer at Mint Digital, an agency in London</aside>
         </section>
         <section>
 					<h1 style="margin-top:0; color:#403F33;">3D CSS</h1>
 					<h3>Finding the right perspective</h3>
           <img src="lib/images/frontpage.png" alt="" style="margin-left:-199px; bottom:10px;">
-          <aside class="notes">
-            <ol>
-              <li>At Mint I've worked with 3D CSS</li>
-              <li>Excited about it</li>
-              <li>Will explain what it is and how it works</li>
-              <li>How to </li>
-              <li>Share some thoughts on when to use it</li>
-            </ol>
-          </aside>
 				</section>
 
         <section>
@@ -62,12 +52,6 @@
               <li><p>translate()</p></li>
             </ul>
             <img src="lib/images/compound_transform.svg" alt="" style="left: auto; right: 50px; top: 100px; width: 400px;">
-            <aside class="notes">
-              <ol>
-                <li>You still need -webkit- and -moz- prefixes etc. I left them out of the slides for the sake of code readability.</li>
-                <li>Jquery does this already for you, since version 1.8</li>
-              </ol>
-            </aside>
           </section>
           <section>
             <h2>CSS Rotation</h2>
@@ -128,7 +112,6 @@ div:hover {
 
           <section>
             <h2 style="margin-top:240px; position:relative;">GPU acceleration</h2>
-            <aside class="notes">trick the browser into thinking they're rendering in 3d, this turns on gpu acceleration for 2D animations</aside>
           </section>
 
           <section>
@@ -156,11 +139,6 @@ div:hover {
             <div class="single-plane" id="plane2" style="background-color:#6E755F; width:200px; height:200px; margin:60px auto 0 auto;">
               <img src="lib/images/html5-3d-logo.png" style="width:200px; margin:0; position:static; left:auto; top:auto;" alt="">
             </div>
-            <aside class="notes">
-              <ol>
-                <li>You need to set perspective for it to be 3D</li>
-              </ol>
-            </aside>
           </section>
         </section>
 
@@ -591,12 +569,6 @@ div:hover {
                 this.className += " hover";
               };
             </script>
-            <aside class="notes">
-              <ol>
-                <li>if there's no rotation applied and the translateZ is greater than the perspective...</li>
-                <li>...the object will be invisible because it's behind the viewer</li>
-              </ol>
-            </aside>
           </section>
         </section>
 
@@ -634,25 +606,12 @@ div:hover {
 elm.getComputedStyle('transform');
 
 <span class="fragment">// matrix(0.9, -0.05, -0.375, 1.375, 220, 20)</span></code></pre>
-            <aside class="notes">
-              <ol>
-                <li>this is a simple example from a 2D transform</li>
-                <li>the matrix values can be inserted in the css again with the matrix3d() transform function</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2>New coordinates</h2>
             <img src="lib/images/calc.png" alt="" style="margin-left:-400px; bottom:380px; width:900px;">
             <img src="lib/images/matrice-visual.png" alt="" style="margin-left:-320px; bottom:20px;">
-            <aside class="notes">
-              <ol>
-                <li>advantage is that you can apply all transforms at once</li>
-                <li>you can perform some serious calculations on the transform values</li>
-                <li>and are able to fix problems more efficiently</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -839,35 +798,17 @@ elm.getComputedStyle('transform');
               </div>
             </div>
           </div>
-          <aside class="notes">
-            <ol>
-              <li>So all those demos are really nice, but what is it like to use this in a production environment?</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
           <h2>Foldable.Me</h2>
           <img src="lib/images/foldableme.jpg" alt="" style="width:650px; margin-left:-325px; bottom:10px;">
-          <aside class="notes">
-            <ol>
-              <li>We used 3D CSS in Foldable.Me. A site where you can buy 3D cardboard avatars. I created a 3D preview of the product with CSS.</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
           <section>
             <h2><span style="color:#E54C10;">Tip 1:</span> Test in beta versions too</h2>
             <img src="lib/images/beta-versions.jpg" alt="" style="width:700px; margin-left:-350px;">
-            <aside class="notes">
-              <ol>
-                <li>Auto updating browsers (like Chrome and FF) caused a lot of pain</li>
-                <li>Sometimes bugs appeared out of the blue, they also can be solved automagically by an update (like the arms pressing through)</li>
-                <li>Because the browser support was relatively new and weak</li>
-                <li>Show some examples of things I encountered</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -879,11 +820,6 @@ elm.getComputedStyle('transform');
             <h2>Firefox after update</h2>
             <img src="lib/images/FF12.png" alt="" style="margin-left:-195px">
             <img class="fragment" src="lib/images/FF12-troll.png" alt="" style="margin-left:-195px; position: absolute; left:50%;">
-            <aside class="notes">
-              <ol>
-                <li>Fix was to put transform-style: preserve-3d on every div.cube</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -894,13 +830,6 @@ elm.getComputedStyle('transform');
           <section>
             <h2>Chrome after update</h2>
             <img src="lib/images/chrome19.png" alt="" style="width:600px; margin-left:-300px; bottom:125px;">
-            <aside class="notes">
-              <ol>
-                <li>The gender selector went fuzzy, for no apparent reason</li>
-                <li>Fix was to add higher z-index to the selector container</li>
-                <li>the list of issues like this goes on and on...</li>
-              </ol>
-            </aside>
           </section>
         </section>
 
@@ -917,38 +846,16 @@ elm.getComputedStyle('transform');
                 <div class="face" id="face6"></div>
               </div>
             </div>
-            <aside class="notes">
-              <ol>
-                <li>Euler rotation</li>
-                <li>Gimbal Lock</li>
-                <li>In this example we're rotating 3 axis</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2>Gimbal Lock</h2>
             <img src="lib/images/gimballock.gif" alt="" width="402" style="margin-left: -200px;">
-            <aside class="notes">
-              <ol>
-                <li>Gimbal lock is the loss of one degree of freedom in a three-dimensional space that occurs when the axes of two of the three gimbals are driven into a parallel configuration, "locking" the system into rotation in a two-dimensional space.</li>
-                <li>The gimbals are not actually locked</li>
-                <li>Gimbal lock inevitably occurs at some point in the system</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2>Apollo 11</h2>
             <img src="lib/images/nasa.jpg" style="margin-left: -320px; bottom:20px;" alt="">
-            <aside class="notes">
-              <ol>
-                <li>104:59:35 Garriott: Columbia, Houston. We noticed you are maneuvering very close to gimbal lock. I suggest you move back away. Over.</li>
-                <li>104:59:43 Collins: Yeah. I am going around it, doing a CMC Auto maneuver to the Pad values of roll 270, pitch 101, yaw 45.</li>
-                <li>104:59:52 Garriott: Roger, Columbia. (Long Pause)</li>
-                <li>105:00:30 Collins: (Faint, joking) How about sending me a fourth gimbal for Christmas.</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -963,13 +870,6 @@ elm.getComputedStyle('transform');
                 <div class="face" id="face6"></div>
               </div>
             </div>
-            <aside class="notes">
-              <ol>
-                <li>If all you want to do, is show all faces of the object, then in most cases rotating 2 axis will do</li>
-                <li>With 2 axis you can work around Gimbal lock by changing rotation order (swap rotateX and rotateY for example)</li>
-                <li>In this case there's one face you'll never see in this cube</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -984,11 +884,6 @@ elm.getComputedStyle('transform');
                 <div class="face" id="face6"></div>
               </div>
             </div>
-            <aside class="notes">
-              <ol>
-                <li>rotate 1 axis on normal speed, and one on double speed, to prevent never showing one face of the cube</li>
-              </ol>
-            </aside>
           </section>
 
           <section id="traqball">
@@ -1004,13 +899,6 @@ elm.getComputedStyle('transform');
                 <div class="face" id="bottom"></div>
               </div>
             </div>
-            <aside class="notes">
-              <ol>
-                <li>creates virual trackball around the aboject</li>
-                <li>more natural rotation</li>
-                <li>prevents Gimbal lock</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -1030,14 +918,6 @@ elm.getComputedStyle('transform');
                 <p>Safari</p>
               </div>
             </div>
-
-            <aside class="notes">
-              <ol>
-                <li>Don't intersect planes (for now)</li>
-                <li>There is a bug in Chrome which results in flickering animations when planes are intersecting</li>
-                <li>It doesn't do proper dept-sorting</li>
-              </ol>
-            </aside>
           </section>
           <section>
             <h2>Webkit doesn't draw</h2>
@@ -1047,14 +927,6 @@ elm.getComputedStyle('transform');
               <a href="http://vimeo.com/22158462">vimeo.com/22158462</a>
             </div>
 
-            <aside class="notes">
-              <ol>
-                <li>Safari and Chrome, both Webkit</li>
-                <li>Webkit doesn't do painting on the screen</li>
-                <li>Browsers have their own low-level rendering layer</li>
-                <li>Chrome uses Skia while Safari uses CoreGraphics</li>
-              </ol>
-            </aside>
           </section>
         </section>
 
@@ -1068,19 +940,11 @@ elm.getComputedStyle('transform');
             <h2>chrome://flags</h2>
             <img src="lib/images/render-layer-borders.png" alt="" style="width:500px; position: relative; margin:0 auto; left:auto; bottom:auto;">
             <p>'Composited render layer borders'</p>
-            <aside class="notes">
-              <ol>
-                <li>Renders a border around composited Render Layers to help debug and study layer compositing.</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2>chrome://gpu</h2>
             <img src="lib/images/chrome-gpu.png" alt="" style="margin-left:-374px; bottom:50px;">
-            <aside class="notes">
-              You can use chrome://about as a general overview of all of these Chrome features
-            </aside>
           </section>
 
         </section>
@@ -1088,9 +952,6 @@ elm.getComputedStyle('transform');
         <section>
           <h2><span style="color:#E54C10;">Tip 5:</span> Photon.js</h2>
           <img src="lib/images/photon.png" alt="" style="margin-left:-308px;">
-          <aside class="notes">
-            It's rather processor-intensive, so please use responsibly.
-          </aside>
         </section>
 
         <section>
@@ -1099,43 +960,21 @@ elm.getComputedStyle('transform');
             <li class="fragment" style="margin-bottom: .75em;">All faces are still flat</li>
             <li class="fragment" style="margin-bottom: .75em;">No proper lighting engine</li>
           </ul>
-          <aside class="notes">
-            <ol>
-              <li>Ready to use, but with limitations to keep in mind</li>
-              <li>IE support from version 10</li>
-              <li>some GPU/os combinations blacklisted in Chrome</li>
-              <li>Probably don't intersect planes until Chrome has fixed that</li>
-              <li>Make sure if degrades gracefully on browser that are lacking support</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
           <h1>Alternatives</h1>
-          <aside class="notes">In case you want to go more advanced with 3D graphics...
-            </aside>
         </section>
 
         <section>
           <section>
             <h2>WebGL</h2>
             <img src="lib/images/webgl.png" alt="" style="margin-left:-290px; bottom:100px;">
-            <aside class="notes">
-              <ol>
-                <li>Javascript API allowing the browser to render GPU accelerated 3D content in canvas.</li>
-                <li>Renders with OpenGL on Mac and DirectX on Windows</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2><h2>Create with Blender</h2></h2>
             <img src="lib/images/blender.png" style="width:650px; margin-left:-325px; bottom:20px;" alt="">
-            <aside class="notes">
-              <ol>
-                <li>Ability to import models from tools like 3Ds Max, Maya, Blender etc.</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
@@ -1146,9 +985,6 @@ elm.getComputedStyle('transform');
           <section>
             <h2>Proper lighting</h2>
             <a href="http://mrdoob.github.com/three.js/examples/webgl_particles_shapes.html" target="_blank"><img src="lib/images/threejs.png" alt="" style="width:700px; margin-left:-350px;"></a>
-            <aside class="notes">
-              Javascript library to create 3D graphics with Canvas, SVG and WebGL.
-            </aside>
           </section>
 
         </section>
@@ -1156,13 +992,6 @@ elm.getComputedStyle('transform');
         <section>
           <h2>Flash</h2>
           <img src="lib/images/adobe-flash-logo.jpg" alt="" style="bottom:125px; margin-left:-128px;">
-          <aside class="notes">
-            <ol>
-              <li>Ability to import models from tools like 3Ds Max, Maya, Blender etc.</li>
-              <li>Renders with OpenGL on Mac and DirectX on Windows</li>
-              <li>Unreal engine running in flash (www.unrealengine.com/flash)</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
@@ -1188,34 +1017,12 @@ elm.getComputedStyle('transform');
     &lt;/shape&gt;
   &lt;/scene&gt;
 &lt;/dec3d&gt;</code></pre>
-            <aside class="notes">
-              <ol>
-                <li>W3C Declarative 3D Group are collecting and analising requirements for declarative 3D running in a web browser</li>
-                <li>This could use WebGL to render, but instead of script you use markup</li>
-
-                <li>Blender can already export to X3D format</li>
-                <li>Support? Not native in browsers I think</li>
-                <li>goal is to make X3d as well supported as SVG is</li>
-              </ol>
-            </aside>
           </section>
 
           <section>
             <h2>CSS Custom Filters</h2>
             <img src="lib/images/custom-filters.jpg" style="position:relative; width:600px; margin:50px auto -30px auto; left:auto;" alt="">
             <p>Adobe CSS FilterLab: <a href="http://adobe.ly/PqozPh" target="_blank">adobe.ly/PqozPh</a></p>
-            <aside class="notes">
-              <ol>
-                <li>An Adobe initiative</li>
-                <li>Previously known as CSS Shaders</li>
-                <li>Accepted by W3C as Editor's draft</li>
-                <li>Use GLSL to add shaders to the DOM</li>
-                <li>Same Shading language as you can use in WebGL</li>
-                <li>Shading language is used to program shader (rendering) effects</li>
-                <li>Try it yourself with Chrome Canary</li>
-                <li>Google for CSS Filter Lab</li>
-              </ol>
-            </aside>
           </section>
         </section>
 
@@ -1228,13 +1035,6 @@ elm.getComputedStyle('transform');
           <h2>3D on the web isn't new</h2>
           <img src="lib/images/second-life.jpg" alt="" style="bottom:120px; margin-left: -331px;">
           <img src="lib/images/click_here.gif" style="width:200px; margin-left:-100px; bottom:0px;" alt="">
-
-          <aside class="notes">
-            <ol>
-              <li>Your users have probably seen it in Flash of Gif format before</li>
-              <li>To them it all looks the same</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
@@ -1244,23 +1044,11 @@ elm.getComputedStyle('transform');
           </blockquote>
           <p style="color:#545A46; margin-top:1em; font-style:italic;">Jacob Nielsen</p>
           <a href="http://bit.ly/rveMQ" style="color:#545A46;">http://bit.ly/rveMQ</a>
-          <aside class="notes">
-            <ol>
-              <li>Example of virtual shopping mall</li>
-              <li>If you ask users to "walk around the mall", you are putting your interface in the way of their goal.</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
           <h1>Having said</h1>
           <h2>that...</h2>
-          <aside class="notes">
-            <ol>
-              <li>doesn't mean it's useless</li>
-              <li>think of ways in which we use 3D CSS to enrich UX</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
@@ -1272,14 +1060,6 @@ elm.getComputedStyle('transform');
         <section>
           <h2>Tell a designer</h2>
           <img src="lib/images/bad-design.jpg" style="position: absolute; margin-left:-375px; bottom:0;" alt="">
-          <aside class="notes">
-            <ol>
-              <li>If you're not brilliant at graphic design (and I belong to that group)</li>
-              <li>at least go and show the designers on your team what you can do with 3D CSS</li>
-              <li>and that not everything has to be in 2D anymore</li>
-              <li>with so many talented designer in our industry, together we can get the best out of this technology!</li>
-            </ol>
-          </aside>
         </section>
 
         <section>
